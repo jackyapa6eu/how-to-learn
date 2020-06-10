@@ -146,7 +146,7 @@ p, h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-.section__title {
+.section-title {
   width: 60%;
   margin: 0;
   text-align: center;
@@ -155,7 +155,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
 
-.section__title-space-top {
+.section-title-space-top {
   margin-top: 100px;
 }
 
@@ -206,7 +206,7 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 100px;
 }
 
-.feinman {
+.feynman {
   display: flex;
   position: relative;
   flex-direction: column;
@@ -218,7 +218,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background-position: left bottom;
 }
 
-.feinman__title {
+.feynman__title {
   width: 648px;
   font-size: 120px;
   line-height: 1.15;
@@ -226,19 +226,19 @@ p, h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-.feinman__subtitle {
+.feynman__subtitle {
   line-height: 51px;
 }
 
-.feinman__subtitle-space-top {
+.feynman__subtitle-space-top {
   margin-top: 70px;
 }
 
-.feinman__inner-space-top {
+.feynman__inner-space-top {
   padding-top: 100px;
 }
 
-.feinman__link {
+.feynman__link {
   position: absolute;
   right: 48px;
   top: 50%;
@@ -256,7 +256,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-.section__title_theme-dark {
+.section-title_theme-dark {
   position: relative;
   z-index: 3;
   color: white;
