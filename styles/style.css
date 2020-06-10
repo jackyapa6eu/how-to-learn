@@ -256,14 +256,14 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
-.section-title_theme-dark {
+.section-title-theme-dark {
   position: relative;
   z-index: 3;
   color: white;
   margin-top: 90px;
 }
 
-.section-subtitle_theme-dark {
+.section-subtitle-theme-dark {
   color: white;
   margin-top: 20px;
 }
