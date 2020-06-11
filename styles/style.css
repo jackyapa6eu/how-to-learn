@@ -10,22 +10,6 @@
   color: #000;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
-
-.font_size_s {
-  font-size: 18px;
-}
-
-.font_size_m {
-  font-size: 24px;
-}
-
-.font_size_l {
-  font-size: 36px;
-}
-
 .header {
   display: flex;
   position: relative;
@@ -45,7 +29,7 @@ p, h1, h2, h3, h4, h5, h6 {
   background-repeat: no-repeat;
 }
 
-.logo__place_header {
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
@@ -59,6 +43,7 @@ p, h1, h2, h3, h4, h5, h6 {
   width: 730px;
   align-self: center;
   z-index: 3;
+  margin: 0;
   line-height: 96px;
   font-size: 102px;
   font-weight: bold;
@@ -68,15 +53,46 @@ p, h1, h2, h3, h4, h5, h6 {
   position: absolute;
   left: 64px;
   bottom: 30px;
+  margin: 0;
   z-index: 3;
   width: 388px;
   line-height: 25px;
+  font-size: 18px;
 }
 
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+  position: relative;
+  transition: color .5s linear;
+  /*Позиционирование строчкой выше для корректного позиционирования псевдоэлемента ::after */
 }
+
+/* Интерактивные элементы начало */
+
+.header__link:hover {
+  color: black;
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 43px);
+  top: -75%;
+  width: 70px;
+  height: 70px;
+  background: url(../images/kaufman-triangle.svg);
+  background-size: contain;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .5s linear;
+}
+
+.header__link:hover::after {
+  opacity: 1;
+}
+
+/* Интерактивные элементы конец */
 
 .header__main-illustration {
   position: absolute;
@@ -117,6 +133,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .two-columns__brief {
   width: 175px;
   margin: 0;
+  font-size: 18px;
   line-height: 1.2;
   font-weight: normal;
   color: #2f80ed;
@@ -128,11 +145,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .two-columns__paragraph {
+  margin: 0;
+  font-size: 24px;
   line-height: 34px;
   font-weight: normal;
 }
 
-.two-columns__paragraph-space-top {
+.two-columns__paragraph:nth-of-type(n + 2) {
   margin-top: 30px;
 }
 
@@ -162,6 +181,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .section-subtitle {
   width: 60%;
   margin: 0;
+  font-size: 24px;
   line-height: 34px;
   text-align: center;
 }
@@ -190,11 +210,15 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .table__heading {
+  margin: 0;
+  font-size: 24px;
   font-weight: bold;
   line-height: 1.15;
 }
 
 .table__text {
+  margin: 0;
+  font-size: 18px;
   line-height: 1.2;
 }
 
@@ -212,7 +236,7 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   align-items: center;
   background: #f2f2f2;
-  height: 790px;
+  min-height: 790px;
   background-image: url(../images/feynman.png);
   background-repeat: no-repeat;
   background-position: left bottom;
@@ -220,6 +244,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .feynman__title {
   width: 648px;
+  margin: 0;
   font-size: 120px;
   line-height: 1.15;
   font-weight: bold;
@@ -227,6 +252,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .feynman__subtitle {
+  margin: 0;
+  font-size: 36px;
   line-height: 51px;
 }
 
@@ -242,10 +269,30 @@ p, h1, h2, h3, h4, h5, h6 {
   position: absolute;
   right: 48px;
   top: 50%;
+  font-size: 36px;
   line-height: 51px;
   text-decoration: none;
-  color: #2f80ed;
+  color: #000;
 }
+
+/* Интерактивные элементы начало */
+
+.feynman__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 85%;
+  border-bottom: solid 2px#000;
+  transition: width .5s linear;
+}
+
+.feynman__link:hover::after {
+  width: 100%;
+}
+
+/* Интерактивные элементы конец */
 
 .kaufman {
   display: flex;
@@ -323,7 +370,7 @@ p, h1, h2, h3, h4, h5, h6 {
   flex-basis: 711px;
 }
 
-.logo__place_footer {
+.logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
 }
 
@@ -331,6 +378,7 @@ p, h1, h2, h3, h4, h5, h6 {
   margin-top: 18px;
   margin-bottom: 18px;
   color: white;
+  font-size: 18px;
   line-height: 25px;
 }
 
@@ -341,14 +389,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .footer__column-heading {
+  margin: 0;
   color: white;
   font-weight: bold;
+  font-size: 18px;
   line-height: 30px;
-}
-
-.footer__column-links {
-  display: flex;
-  flex-direction: column;
 }
 
 .footer__column-links_space-top-bottom {
@@ -359,8 +404,36 @@ p, h1, h2, h3, h4, h5, h6 {
 .footer__column-link {
   text-decoration: none;
   color: white;
+  font-size: 18px;
   line-height: 30px;
+  position: relative;
 }
+
+/* Интерактивные элементы начало */
+
+.footer__column-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  border-bottom: solid 2px white;
+  transition: width .5s linear;
+}
+
+.footer__column_content_info .footer__column-link::after {
+  height: 20px;
+}
+
+.footer__column_content_social .footer__column-link::after {
+  height: 25px;
+}
+
+.footer__column-link:hover::after {
+  width: 100%;
+}
+
+/* Интерактивные элементы конец */
 
 .footer__socials-align-center {
   display: flex;
