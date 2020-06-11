@@ -284,7 +284,7 @@
   top: 0;
   width: 0;
   height: 85%;
-  border-bottom: solid 2px#000;
+  border-bottom: solid 2px #000;
   transition: width .5s linear;
 }
 
