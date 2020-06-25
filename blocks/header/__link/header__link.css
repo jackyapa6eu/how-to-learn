@@ -2,14 +2,12 @@
   text-decoration: none;
   color: #2f80ed;
   position: relative;
-  transition: color .5s linear;
-  /*Позиционирование строчкой выше для корректного позиционирования псевдоэлемента ::after */
+  transition: color .5s linear, opacity .5s linear;
 }
-
-/* Интерактивные элементы начало */
 
 .header__link:hover {
   color: black;
+  opacity: .5;
 }
 
 .header__link::after {

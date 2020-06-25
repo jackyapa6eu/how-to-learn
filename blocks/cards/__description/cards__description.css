@@ -1,0 +1,7 @@
+.cards__description {
+  margin: 0;
+  line-height: 23px;
+  font-size: 18px;
+  padding: 0 5px;
+  /* Добавил padding чтобы вызуально текс расположился как в брифе, а именно карточка "два вида внимания" */
+}

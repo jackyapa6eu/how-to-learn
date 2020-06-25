@@ -1,0 +1,14 @@
+@import url(./__logo-zone/resources__logo-zone.css);
+@import url(./__logo/resources__logo.css);
+@import url(./__logo/_content/resources__logo_content_arzamas.css);
+@import url(./__logo/_content/resources__logo_content_n1.css);
+@import url(./__logo/_content/resources__logo_content_polka.css);
+@import url(./__logo/_content/resources__logo_content_strelka.css);
+
+.resources {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 217px;
+}

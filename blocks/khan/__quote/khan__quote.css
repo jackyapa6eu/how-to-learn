@@ -1,0 +1,18 @@
+.khan__quote {
+  display: block;
+  width: 790px;
+  margin-bottom: 36px;
+  line-height: 34px;
+  font-size: 24px;
+  /*Ниже два стиля для того, чтобы визуально было более похоже на макет из брифа*/
+  box-sizing: border-box;
+  padding-right: 5px;
+}
+
+.khan__quote::before {
+  content: none;
+}
+
+.khan__quote::after {
+  content: none;
+}
