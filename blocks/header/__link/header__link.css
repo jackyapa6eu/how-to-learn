@@ -1,0 +1,31 @@
+.header__link {
+  text-decoration: none;
+  color: #2f80ed;
+  position: relative;
+  transition: color .5s linear;
+  /*Позиционирование строчкой выше для корректного позиционирования псевдоэлемента ::after */
+}
+
+/* Интерактивные элементы начало */
+
+.header__link:hover {
+  color: black;
+}
+
+.header__link::after {
+  content: '';
+  position: absolute;
+  left: calc(50% - 43px);
+  top: -75%;
+  width: 70px;
+  height: 70px;
+  background: url(../../../images/kaufman-triangle.svg);
+  background-size: contain;
+  opacity: 0;
+  z-index: -1;
+  transition: opacity .5s linear;
+}
+
+.header__link:hover::after {
+  opacity: 1;
+}
