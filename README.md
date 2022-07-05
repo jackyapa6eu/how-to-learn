@@ -12,4 +12,6 @@
 - Псевдо-элементы.
 - iframe
 
+## Статус проекта: завершен
+
 ## [Ссылка на Github Pages](https://jackyapa6eu.github.io/how-to-learn/)
